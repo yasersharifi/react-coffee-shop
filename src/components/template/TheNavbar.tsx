@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface MenuItemsType {
     title: string,
@@ -33,6 +33,8 @@ const menuItems: MenuItemsType[] = [
 ]
 
 const TheNavbar = () => {
+    const location = useLocation(); 
+    
     return (
         <>
             {/* Navbar Start */}
@@ -59,7 +61,7 @@ const TheNavbar = () => {
                                 return (
                                     <Link 
                                         to={menu.url} 
-                                        className="nav-item nav-link active"
+                                        className={`nav-item nav-link ${menu.url === location.pathname ? 'active' : ''}`}
                                     >
                                         { menu.title }
                                     </Link>
