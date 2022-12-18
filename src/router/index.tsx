@@ -3,6 +3,7 @@ import App from "../App";
 import TheAbout from "../components/TheAbout";
 import TheService from '../components/TheService';
 import TheMenu from '../components/TheMenu';
+import TheContact from '../components/TheContact';
 
 const routes = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const routes = createBrowserRouter([
     {
         path: 'menu',
         element: <TheMenu />
+    },
+    {
+        path: 'contact',
+        element: <TheContact />
     }
 ])
 
