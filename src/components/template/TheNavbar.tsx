@@ -1,3 +1,37 @@
+import { Link } from "react-router-dom";
+
+interface MenuItemsType {
+    title: string,
+    url: string
+}
+
+const menuItems: MenuItemsType[] = [
+    {
+        title: "Home",
+        url: "/"
+    },
+    {
+        title: "About",
+        url: "/about"
+    },
+    {
+        title: "Service",
+        url: "/service"
+    },
+    {
+        title: "Reservation",
+        url: "/reservation"
+    },
+    {
+        title: "Testimonial",
+        url: "/testimonial"
+    },
+    {
+        title: "Contact",
+        url: "/contact"
+    },
+]
+
 const TheNavbar = () => {
     return (
         <>
@@ -20,19 +54,19 @@ const TheNavbar = () => {
                     id="navbarCollapse"
                 >
                     <div className="navbar-nav ml-auto p-4">
-                    <a href="index.html" className="nav-item nav-link active">
-                        Home
-                    </a>
-                    <a href="about.html" className="nav-item nav-link">
-                        About
-                    </a>
-                    <a href="service.html" className="nav-item nav-link">
-                        Service
-                    </a>
-                    <a href="menu.html" className="nav-item nav-link">
-                        Menu
-                    </a>
-                    <div className="nav-item dropdown">
+                        {
+                            menuItems.map((menu: MenuItemsType) => {
+                                return (
+                                    <Link 
+                                        to={menu.url} 
+                                        className="nav-item nav-link active"
+                                    >
+                                        { menu.title }
+                                    </Link>
+                                )
+                            })
+                        }
+                    {/* <div className="nav-item dropdown">
                         <a
                         href="#"
                         className="nav-link dropdown-toggle"
@@ -48,10 +82,7 @@ const TheNavbar = () => {
                             Testimonial
                         </a>
                         </div>
-                    </div>
-                    <a href="contact.html" className="nav-item nav-link">
-                        Contact
-                    </a>
+                    </div> */}
                     </div>
                 </div>
                 </nav>
