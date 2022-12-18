@@ -1,5 +1,8 @@
 import { createBrowserRouter, Link } from "react-router-dom"
 import App from "../App";
+import TheAbout from "../components/TheAbout";
+import TheService from '../components/TheService';
+import TheMenu from '../components/TheMenu';
 
 const routes = createBrowserRouter([
     {
@@ -9,12 +12,15 @@ const routes = createBrowserRouter([
     },
     {
         path: 'about',
-        element: (
-            <>
-                <h1>About Us</h1>
-                <Link to="/">Home</Link>
-            </>
-        )
+        element: <TheAbout />
+    },
+    {
+        path: 'service',
+        element: <TheService />
+    },
+    {
+        path: 'menu',
+        element: <TheMenu />
     }
 ])
 
