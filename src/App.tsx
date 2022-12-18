@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import { Button } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +16,7 @@ function App() {
           'light',
           'dark'
         ].map((variant: string) => {
-          return <><Button variant={`outline-${variant}`}>{ variant.charAt(0).toUpperCase() + variant.slice(1) }</Button>{' '}</>
+          return <><button>{ variant.charAt(0).toUpperCase() + variant.slice(1) }</button>{' '}</>
         })
       }
     </div>
