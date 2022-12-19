@@ -1,40 +1,42 @@
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 interface MenuItemsType {
     title: string,
     url: string
 }
 
-const menuItems: MenuItemsType[] = [
-    {
-        title: "Home",
-        url: "/"
-    },
-    {
-        title: "About",
-        url: "/about"
-    },
-    {
-        title: "Service",
-        url: "/service"
-    },
-    {
-        title: "Reservation",
-        url: "/reservation"
-    },
-    {
-        title: "Testimonial",
-        url: "/testimonial"
-    },
-    {
-        title: "Contact",
-        url: "/contact"
-    },
-]
-
 const TheNavbar = () => {
-    const location = useLocation(); 
-    
+    const location = useLocation();
+    const { t } = useTranslation();
+
+    const menuItems: MenuItemsType[] = [
+        {
+            title: t("Home"),
+            url: "/"
+        },
+        {
+            title: t("About"),
+            url: "/about"
+        },
+        {
+            title: t("Service"),
+            url: "/service"
+        },
+        {
+            title: t("Reservation"),
+            url: "/reservation"
+        },
+        {
+            title: t("Testimonial"),
+            url: "/testimonial"
+        },
+        {
+            title: t("Contact"),
+            url: "/contact"
+        },
+    ]
+        
     return (
         <>
             {/* Navbar Start */}
@@ -57,11 +59,12 @@ const TheNavbar = () => {
                 >
                     <div className="navbar-nav ml-auto p-4">
                         {
-                            menuItems.map((menu: MenuItemsType) => {
+                            menuItems.map((menu: MenuItemsType, index: number) => {
                                 return (
                                     <Link 
                                         to={menu.url} 
                                         className={`nav-item nav-link ${menu.url === location.pathname ? 'active' : ''}`}
+                                        key={`menu-item-${index}`}
                                     >
                                         { menu.title }
                                     </Link>

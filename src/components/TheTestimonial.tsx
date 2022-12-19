@@ -22,7 +22,7 @@ const TheTestimonial = () => {
                 <div className="owl-carousel testimonial-carousel">
                     <div className="testimonial-item">
                     <div className="d-flex align-items-center mb-3">
-                        <img className="img-fluid" src="img/testimonial-1.jpg" alt="" />
+                        <img className="img-fluid" src="assets/img/testimonial-1.jpg" alt="" />
                         <div className="ml-3">
                         <h4>Client Name</h4>
                         <i>Profession</i>
@@ -35,7 +35,7 @@ const TheTestimonial = () => {
                     </div>
                     <div className="testimonial-item">
                     <div className="d-flex align-items-center mb-3">
-                        <img className="img-fluid" src="img/testimonial-2.jpg" alt="" />
+                        <img className="img-fluid" src="assets/img/testimonial-2.jpg" alt="" />
                         <div className="ml-3">
                         <h4>Client Name</h4>
                         <i>Profession</i>
@@ -48,7 +48,7 @@ const TheTestimonial = () => {
                     </div>
                     <div className="testimonial-item">
                     <div className="d-flex align-items-center mb-3">
-                        <img className="img-fluid" src="img/testimonial-3.jpg" alt="" />
+                        <img className="img-fluid" src="assets/img/testimonial-3.jpg" alt="" />
                         <div className="ml-3">
                         <h4>Client Name</h4>
                         <i>Profession</i>
@@ -61,7 +61,7 @@ const TheTestimonial = () => {
                     </div>
                     <div className="testimonial-item">
                     <div className="d-flex align-items-center mb-3">
-                        <img className="img-fluid" src="img/testimonial-4.jpg" alt="" />
+                        <img className="img-fluid" src="assets/img/testimonial-4.jpg" alt="" />
                         <div className="ml-3">
                         <h4>Client Name</h4>
                         <i>Profession</i>
